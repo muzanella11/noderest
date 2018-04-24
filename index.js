@@ -1,4 +1,2 @@
-const server = require('./server/index')
-const app = server
-
+const app = require('./server/index')
 app.init()
