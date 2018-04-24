@@ -4,6 +4,7 @@ const enChalk = require('./../utils/chalk')
 const env = require('dotenv').config()
 const port = process.env.PORT || 1234
 const db = require('./../config/database')
+const router = require('./../router/index')
 
 const initApp = () => {
   console.clear()
@@ -14,6 +15,12 @@ const initApp = () => {
 
   // Database connection
   db.connect().then((resolve) => {
+    // Connection
+    var connection = resolve
+
+    // Router
+    router.init(appEn, connection)
+    
     // Listener
     appEn.listen(port, () => {
       console.log(enChalk.success('App listening on port ' + port + '!'))

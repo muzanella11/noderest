@@ -22,7 +22,7 @@ const connectDb = () => {
         console.clear()
         throw new Error('Database not connected :( ')
       } else {
-        resolve()
+        resolve(connection)
         console.info(enChalk.success('Database Connected :) '))
       }
     })
