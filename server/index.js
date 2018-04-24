@@ -18,10 +18,10 @@ const initApp = () => {
     // Connection
     var connection = resolve
 
-    // Router
+    // Router Apps
     router.init(appEn, connection)
     
-    // Listener
+    // Listener Apps
     appEn.listen(port, () => {
       console.log(enChalk.success('App listening on port ' + port + '!'))
     })

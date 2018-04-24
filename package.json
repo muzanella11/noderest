@@ -23,7 +23,8 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "http": "0.0.0",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "sql-schema-builder": "^0.3.11"
   },
   "bugs": {
     "url": "https://github.com/muzanella11/noderest/issues"
