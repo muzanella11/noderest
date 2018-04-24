@@ -13,11 +13,13 @@ const initApp = () => {
   console.info('')
 
   // Database connection
-  db.init(appEn)
-
-  // Listener
-  appEn.listen(port, () => {
-    console.log(enChalk.success('App listening on port ' + port + '!'))
+  db.connect().then((resolve) => {
+    // Listener
+    appEn.listen(port, () => {
+      console.log(enChalk.success('App listening on port ' + port + '!'))
+    })
+  }, (error) => {
+    console.log(enChalk.error('Error Connecting Database :('))
   })
 }
 
